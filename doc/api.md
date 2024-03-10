@@ -20,6 +20,8 @@ And will be parsed to:
 ["--verbose", "--features", "benchmark", "run"]
 ```
 
+Or you can give the array, and the pre-processor will not be run.
+
 ## Command entered
 
 A command or list of commands can be executed.
@@ -28,6 +30,10 @@ A command or list of commands can be executed.
 
 ```js
 mooncake.call_command({ name: "cd", arguments: "mooncake" })
+```
+Or
+```js
+mooncake.call_command({ name: "cd", arguments: ["mooncake"] })
 ```
 
 ### Execute a list of commands
