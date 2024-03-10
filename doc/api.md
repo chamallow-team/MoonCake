@@ -154,3 +154,8 @@ The arguments can be undefined or an empty object.
 
 The `tab` is a boolean which is `true` if the tab key is pressed, and `false` otherwise.
 
+## File System
+
+The fs can be accessed from the `mooncake.fs` object.
+
+Please refer to the [File System](components/fs.md) documentation for more information.
