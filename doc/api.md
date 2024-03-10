@@ -134,7 +134,7 @@ mooncake.events.add_local_listener(id, "keydown", function(key_event){
 })
 ```
 
-## Remove an event
+### Remove an event
 
 ```js
 mooncake.events.remove_global_listener("completion", id)
@@ -144,7 +144,7 @@ Removing a local event is the same, but with `remove_local_listener` instead of 
 
 > Note that the `id` is optional, but if you want to remove a specific event, you will need to give an `id`.
 
-## Fire an event
+### Fire an event
 
 ```js
 mooncake.events.fire("completion", { name: "cd", arguments: "mooncake", last_argument: "moon", tab: false })
@@ -153,3 +153,4 @@ mooncake.events.fire("completion", { name: "cd", arguments: "mooncake", last_arg
 The arguments can be undefined or an empty object.
 
 The `tab` is a boolean which is `true` if the tab key is pressed, and `false` otherwise.
+
