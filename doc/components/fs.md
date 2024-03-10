@@ -89,12 +89,13 @@ assert(0 | 100          == 0b100); // Execute permission
 
 Here is a non-exclusive list of error:
 
-| Name        | Code | Description                                                           |
-|-------------|------|-----------------------------------------------------------------------|
-| CannotWrite | 101  | If the file cannot be written, often because of permissions required. |
-| CannotRead  | 102  | If the file cannot be read, often because of permissions required.    |
-| NotFound    | 103  | If the file doesn't exist.                                            |
-| NotUtf8     | 104  | If the file content cannot be transformed into a utf8 string.         |
+| Name            | Code | Description                                                           |
+|-----------------|------|-----------------------------------------------------------------------|
+| CannotWrite     | 101  | If the file cannot be written, often because of permissions required. |
+| CannotRead      | 102  | If the file cannot be read, often because of permissions required.    |
+| NotFound        | 103  | If the file doesn't exist.                                            |
+| NotUtf8         | 104  | If the file content cannot be transformed into a utf8 string.         |
+| NotAnExecutable | 105  | If the file cannot be executed.                                       |
 
 
 ### Getting a file
