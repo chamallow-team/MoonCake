@@ -49,11 +49,38 @@ The allowed symbols between the commands are:
 
 So each command execution group is represented as:
 
-| Name   | Type              | Description                                             |
-|--------|:------------------|---------------------------------------------------------|
-| first  | `Command`         | The command which will executed in first                |
-| symbol | `Symbol \| null`  | The symbol between the first and last commands, if any. |
-| second | `Command \| null` | The second command which will be executed, if any.      |
+| Name   | Type                             | Description                                             |
+|--------|:---------------------------------|---------------------------------------------------------|
+| first  | `Command`                        | The command which will executed in first                |
+| symbol | `Symbol \| null`                 | The symbol between the first and last commands, if any. |
+| second | `CommandPack \| Command \| null` | The second command which will be executed, if any.      |
 
-
+Therefore, the api will be called like:
+```js
+mooncake.call_commands({
+    first: { name: "javac", arguments: "Main.java"},
+    symbol: "&&",
+    second: {
+        first: { name: "java", argumnets: "Main" } 
+    }
+})
+```
+```js
+mooncake.call_commands({
+    first: { name: "javac", arguments: "Main.java"},
+    symbol: "&&",
+    second: { name: "java", argumnets: "Main" }
+})
+```
+```js
+mooncake.call_commands({
+    first: { name: "cd", arguments: "/home/mooncake/java/helloWorld/"},
+    symbol: "&&",
+    second: {
+        first: { name: "javac", arguments: "Main.java"},
+        symbol: "&&",
+        second: { name: "java", argumnets: "Main" }
+    }
+})
+```
 
